@@ -26,11 +26,13 @@ The application works completely in the browser and does not require any backend
 
 ## 📂 Project Structure
 
----
+```
 WebHabit/
 ├── index.html      # Main HTML file
 ├── style.css       # Styling for the app
 ├── script.js       # Application logic
 └── README.md       # Project documentation
----
+```
+
+
 

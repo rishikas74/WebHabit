@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fa;
+    text-align: center;
+    padding: 30px;
+}
+
+h1 {
+    color: #2c7be5;
+}
+
+.tagline {
+    color: #555;
+}
+
+.habit-box input {
+    padding: 10px;
+    width: 220px;
+}
+
+.habit-box button {
+    padding: 10px;
+    background: #2c7be5;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: white;
+    margin: 10px auto;
+    padding: 10px;
+    width: 320px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.monthly-box {
+    margin-top: 40px;
+}
+
+.progress-card {
+    width: 320px;
+    margin: 10px auto;
+    text-align: left;
+}
+
+.progress-bar {
+    background: #ddd;
+    height: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: #2c7be5;
+}

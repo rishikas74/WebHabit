@@ -1,3 +1,4 @@
+console.log("SCRIPT VERSION 2 LOADED");
 console.log("JS RUNNING");
 
 // force clean state
@@ -40,17 +41,28 @@ renderMonthlyProgress();
 }
 
 function renderHabits() {
-    let list = document.getElementById("habitList");
-    list.innerHTML = "";
+  let list = document.getElementById("habitList");
+  list.innerHTML = "";
 
-    habits.forEach((habit, index) => {
-        let li = document.createElement("li");
-        li.innerHTML = `
-            ${habit.name}
-            <button onclick="markDone(${index})">Done</button>
-        `;
-        list.appendChild(li);
-    });
+  let today = new Date().toISOString().split("T")[0];
+
+  habits.forEach((habit, index) => {
+    let li = document.createElement("li");
+
+    let isDoneToday = habit.completedDates.includes(today);
+
+    li.innerHTML = `
+      ${habit.name}
+      <button 
+        onclick="markDone(${index})" 
+        ${isDoneToday ? "disabled" : ""}
+      >
+        ${isDoneToday ? "Done ✓" : "Done"}
+      </button>
+    `;
+
+    list.appendChild(li);
+  });
 }
 
 function markDone(index) {
@@ -95,4 +107,5 @@ function renderMonthlyProgress() {
 }
 renderHabits();
 renderMonthlyProgress();
+
 
